@@ -1,0 +1,17 @@
+.container{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    img {
+        position: absolute;
+        width: 80%;
+        top: 15vh;
+        left: 10%;
+        transform: rotateX(0deg) rotateY(0deg);
+        transition: all 500ms ease-in;
+        &:hover {
+            transform: rotateX(15deg) rotateY(-5deg);
+            transition: all 500ms ease-out;
+            box-shadow: 40px 40px 30px 10px hsl(0deg 0.12% 53.53% / 50%);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="square">
+      <div class="box left" [class.active]="flip()">left</div>
+      <div class="box right" [class.active]="flip()">right</div>
+      <div class="box front" [class.active]="flip()">front</div>
+      <div class="box back" [class.active]="flip()">back</div>
+      <div class="box top" [class.active]="flip()">top</div>
+      <div class="box bottom" [class.active]="flip()">bottom</div>
+    </div>
+  </div>
+  
+  <button (click)="flip.set(!flip())">{{ !flip() ? 'expand' : 'reset'}}</button>

@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    position: absolute;
+    top: 26%;
+    perspective: 1000px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    .square {
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite;
+        .box {
+            transition: all 1s ease-out;
+            display: grid;
+            place-items: center;
+            width: 250px;
+            height: 250px;
+            background-color: black;
+            border: 2px solid white;
+            color: white;
+            position: absolute;
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+        .left {
+            right:-125px;
+            transform: rotateY(-90deg);
+            &.active {
+                right: -75px !important;
+            }
+        }
+        .right {
+            left:125px;
+            transform: rotateY(-90deg);
+            &.active {
+                left: 175px !important;
+            }
+        }
+        .top {
+            top:-125px;
+            transform: rotateX(90deg);
+            &.active {
+                top: -175px !important;
+            }
+        }
+        .bottom {
+            top:125px;
+            transform: rotateX(-90deg);
+            &.active {
+                top: 175px !important;
+            }
+        }
+        .front {
+            transform: rotateY(-180deg);
+            transform: translateZ(125px);
+            &.active {
+                transform: translateZ(175px);
+            }
+        }
+        .back {
+            transform: rotateY(-180deg);
+            transform: translateZ(-125px);
+            &.active {
+                transform: translateZ(-175px);
+            }
+        }
+    }
+}
+button {
+    margin-top: 200px;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+}

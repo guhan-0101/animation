@@ -1,0 +1,43 @@
+:root {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+*{
+    font-family: serif;
+    margin: 0;
+    padding: 5px;
+}
+nav {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30px;
+  justify-items: center;
+  width: 100%;
+}
+button {
+    width: auto;
+    min-width: 200px;
+    padding: 5px;
+    height: 30px;
+    background-color: hsl(208.09deg 88.4% 56.3%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: transform 300ms ease-in-out;
+    transform: rotateY(-20deg);
+    cursor: pointer;
+    &:hover {
+        box-shadow: 1px 1px 11px 0px #0000ff3d;
+    }
+}
+
+.container {
+    perspective: 1000px;
+    .square {
+        transform-style: preserve-3d;
+    }
+}
+
